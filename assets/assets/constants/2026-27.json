@@ -1,0 +1,50 @@
+{
+  "tax_year": "2026-27",
+  "jurisdiction": "England & Northern Ireland",
+  "status": "PROVISIONAL — pending partner accountancy validation",
+  "last_verified": null,
+  "source_notes": "Figures to be confirmed against gov.uk (income tax + NI), NHS Employers (consultant pay), and NHSBSA (pension contribution tiers) before use.",
+
+  "personal_allowance": 12570,
+  "basic_rate_limit": 37700,
+  "additional_rate_threshold": 125140,
+  "income_tax_basic": 0.20,
+  "income_tax_higher": 0.40,
+  "income_tax_additional": 0.45,
+  "personal_allowance_taper_start": 100000,
+
+  "ni_employee_primary_threshold": 12570,
+  "ni_upper_earnings_limit": 50270,
+  "ni_employee_rate": 0.08,
+  "ni_employee_upper_rate": 0.02,
+
+  "consultant_pa_value": 10800,
+  "premium_time_multiplier": 1.0,
+  "consultant_2002_thresholds": [
+    105504, 108910, 112316, 119133, 125950, 132767, 139882
+  ],
+
+  "pension_tiers": [
+    { "up_to": 13259, "rate": 0.052 },
+    { "up_to": 26831, "rate": 0.065 },
+    { "up_to": 32691, "rate": 0.083 },
+    { "up_to": 49078, "rate": 0.098 },
+    { "up_to": 62924, "rate": 0.107 },
+    { "up_to": null, "rate": 0.125 }
+  ],
+
+  "student_loan_plans": [
+    { "id": "plan_1", "label": "Plan 1", "threshold": 26065, "rate": 0.09 },
+    { "id": "plan_2", "label": "Plan 2", "threshold": 28470, "rate": 0.09 },
+    { "id": "plan_4", "label": "Plan 4 (Scotland)", "threshold": 32745, "rate": 0.09 },
+    { "id": "plan_5", "label": "Plan 5", "threshold": 25000, "rate": 0.09 },
+    { "id": "postgrad", "label": "Postgraduate Loan", "threshold": 21000, "rate": 0.06 }
+  ],
+
+  "bik_rates": {
+    "electric": 0.03,
+    "phev_low": 0.08,
+    "petrol_low": 0.25,
+    "petrol_high": 0.37
+  }
+}
