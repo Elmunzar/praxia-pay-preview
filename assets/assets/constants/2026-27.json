@@ -1,9 +1,9 @@
 {
   "tax_year": "2026-27",
-  "jurisdiction": "England & Northern Ireland",
+  "jurisdiction": "United Kingdom (England & NI base; Scotland income tax separate)",
   "status": "PROVISIONAL — pending partner accountancy validation",
   "last_verified": null,
-  "source_notes": "Figures to be confirmed against gov.uk (income tax + NI), NHS Employers (consultant pay), and NHSBSA (pension contribution tiers) before use.",
+  "source_notes": "To be confirmed against gov.uk (income tax + NI), NHS Employers / nation pay circulars (consultant pay), NHSBSA (pension contributions) and gov.uk (State Pension) before use.",
 
   "personal_allowance": 12570,
   "basic_rate_limit": 37700,
@@ -13,6 +13,18 @@
   "income_tax_additional": 0.45,
   "personal_allowance_taper_start": 100000,
 
+  "scottish_income_tax": {
+    "note": "Bands on TAXABLE income above the (UK-wide) personal allowance + taper.",
+    "bands": [
+      { "name": "starter", "up_to": 2827, "rate": 0.19 },
+      { "name": "basic", "up_to": 14921, "rate": 0.20 },
+      { "name": "intermediate", "up_to": 31092, "rate": 0.21 },
+      { "name": "higher", "up_to": 62430, "rate": 0.42 },
+      { "name": "advanced", "up_to": 125140, "rate": 0.45 },
+      { "name": "top", "up_to": null, "rate": 0.48 }
+    ]
+  },
+
   "ni_employee_primary_threshold": 12570,
   "ni_upper_earnings_limit": 50270,
   "ni_employee_rate": 0.08,
@@ -20,9 +32,14 @@
 
   "consultant_pa_value": 10800,
   "premium_time_multiplier": 1.0,
-  "consultant_2002_thresholds": [
-    105504, 108910, 112316, 119133, 125950, 132767, 139882
-  ],
+  "consultant_threshold_years": [0, 3, 4, 8, 14],
+  "consultant_pay_scales": {
+    "_note": "5 pay points. Endpoints real (NHS Employers / nation circulars); intermediate points for Scotland/Wales/NI are INTERPOLATED — confirm.",
+    "england": [109725, 116182, 119490, 131058, 145478],
+    "scotland": [109407, 115373, 118406, 129085, 142369],
+    "wales": [111300, 119166, 123165, 137246, 154760],
+    "northern_ireland": [106424, 112487, 115568, 126421, 139920]
+  },
 
   "pension_tiers": [
     { "up_to": 13259, "rate": 0.052 },
@@ -32,6 +49,19 @@
     { "up_to": 62924, "rate": 0.107 },
     { "up_to": null, "rate": 0.125 }
   ],
+  "employer_pension_rate": 0.237,
+  "pension_accrual": {
+    "scheme_1995": { "fraction": 0.0125, "lump_sum_multiple": 3, "normal_pension_age": 60 },
+    "scheme_2008": { "fraction": 0.016667, "lump_sum_multiple": 0, "normal_pension_age": 65 },
+    "scheme_2015_care": { "fraction": 0.018519, "in_service_revaluation_over_cpi": 0.015, "normal_pension_age": 67 }
+  },
+
+  "state_pension": {
+    "full_new_weekly": 241.30,
+    "qualifying_years_full": 35,
+    "qualifying_years_min": 10,
+    "state_pension_age": 66
+  },
 
   "student_loan_plans": [
     { "id": "plan_1", "label": "Plan 1", "threshold": 26065, "rate": 0.09 },

@@ -89672,7 +89672,7 @@ h=B.b([m,new B.mY("Estimated take-home / year",k,i+" / month",A.b8,a0),A.pC,d,a.
 m=a1.a
 if(m!==A.kZ){l=B.avl(m)
 k=m===A.dj?" (Scottish bands)":""
-h.push(a.EU("Income tax is calculated for "+l+k+". Note: the pay figure uses England's 2002 consultant scale \u2014 "+B.avl(m)+"'s NHS pay scale differs, so adjust your salary if you know it."))}m=a4*0.237
+h.push(a.EU("Income tax is calculated for "+l+k+". The pay figure uses the "+B.avl(m)+" consultant scale, but its intermediate pay points are estimated \u2014 adjust your salary if you know your exact figure."))}m=a4*0.237
 h.push(B.cL(new B.aS(A.e_,B.cn(B.b([A.aCL,new B.c3("Your pay",B.aq(a4),!1,a0),new B.c3("Employer pension contribution (~23.7%)","+ "+B.aq(m),!1,a0),A.iX,new B.c3("Total reward value",B.aq(a4+m),!0,a0)],g),A.aY,A.a2,A.ab),a0),a0,a0))
 if(r!=null)h.push(a.EU(r))
 if(!a5||a1.c!=null){m=B.b([A.aCM],g)
